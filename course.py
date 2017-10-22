@@ -21,7 +21,7 @@ class course:
             weekkind=0,
             teacher='',
             classroom=''
-            ):
+    ):
         self.cname = cname
         self.cfrom = cfrom
         self.cto = cto
