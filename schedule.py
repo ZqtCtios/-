@@ -1,4 +1,5 @@
 import pymysql
+from course import course
 db = pymysql.connect(
     "localhost",
     "root",
@@ -17,14 +18,24 @@ class schedule:
     week = []
     homework = True
     homework_dir = './homeworks'
+    num = 0
 
     def init_data(self):
-        pass
+        while True:
+
+    def __add_course(self, cid):
+        c = course(cid)
+        c.getdata()
+        c.save()
+        return c
 
     def load(self):
         pass
 
     def alter(self):
+        pass
+
+    def set_dir(self):
         pass
 
     def make_dir(self):

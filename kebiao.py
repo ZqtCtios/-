@@ -5,7 +5,8 @@
 
 # 课程Class
 import pymysql
-from course import course
+
+from schedule import schedule
 db = pymysql.connect(
     "localhost",
     "root",
@@ -17,5 +18,5 @@ cursor = db.cursor()
 
 
 if __name__ == '__main__':
-    c = course()
-    c.save()
+    s = schedule()
+    s.add_course()
