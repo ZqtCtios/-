@@ -10,6 +10,7 @@ cursor = db.cursor()
 
 # 课属性：节数，名字，周数，老师，教室，本周作业
 
+
 class course:
     def __init__(
             self,

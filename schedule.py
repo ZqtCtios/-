@@ -7,6 +7,7 @@ db = pymysql.connect(
     use_unicode=True,
     charset="utf8")
 cursor = db.cursor()
+
 weeks = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
 
 

@@ -17,7 +17,6 @@ cursor = db.cursor()
 
 
 
-
 if __name__ == '__main__':
     c = course()
     c.save()
