@@ -22,8 +22,21 @@ class schedule:
 
     def init_data(self):
         while True:
+            self.num += 1
+            c = self.add_course(self.num)
+            if self.save_to_db(c) != True:
+                print('添加失败，有冲突课程')
+            else:
+                yes = str(input('继续添加？y/n'))
+                if yes.lower() == 'y':
+                    pass
+                else:
+                    break
 
-    def __add_course(self, cid):
+    def save_to_db(self, c):
+        return True
+
+    def add_course(self, cid):
         c = course(cid)
         c.getdata()
         c.save()

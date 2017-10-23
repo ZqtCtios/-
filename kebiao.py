@@ -4,19 +4,30 @@
 # 数据库：
 
 # 课程Class
-import pymysql
-
-from schedule import schedule
-db = pymysql.connect(
-    "localhost",
-    "root",
-    "zqt1997",
-    "kebiao",
-    use_unicode=True,
-    charset="utf8")
-cursor = db.cursor()
 
 
+import json
+course = {'cid': '',
+          'cname': '',
+          'cfrom': '',
+          'cto=0': '',
+          'weekkind': '',
+          'teacher': '',
+          'classroom': ''}
+course_data={}
+
+def make_json():
+    path='course_data.json'
+    f=open(path,'w+')
+    js=json.dumps(course_data, sort_keys=True, indent=4, separators=(',', ': '))
+    f.write(js)
+    f.close()
+    
+def init(num):
+    for i in range(num):
+        course_data[i+1]=course.copy()
+        
+    
 if __name__ == '__main__':
-    s = schedule()
-    s.add_course()
+    init(10)
+    make_json()
