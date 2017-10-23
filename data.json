@@ -18,7 +18,7 @@
         "num": 4,
         "courses": {
             "1": {
-                "cname": "",
+                "cname": "1",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
@@ -27,7 +27,7 @@
                 "classroom": ""
             },
             "2": {
-                "cname": "",
+                "cname": "1",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
@@ -36,7 +36,7 @@
                 "classroom": ""
             },
             "3": {
-                "cname": "",
+                "cname": "2",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
@@ -45,7 +45,7 @@
                 "classroom": ""
             },
             "4": {
-                "cname": "",
+                "cname": "3",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
