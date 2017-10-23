@@ -18,41 +18,50 @@
         "num": 4,
         "courses": {
             "1": {
-                "cname": "1",
+                "cname": "",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
-                "week": "",
+                "week_num": "",
+                "week_from": "",
+                "week_to": "",
                 "teacher": "",
                 "classroom": ""
             },
             "2": {
-                "cname": "1",
+                "cname": "",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
-                "week": "",
+                "week_num": "",
+                "week_from": "",
+                "week_to": "",
                 "teacher": "",
                 "classroom": ""
             },
             "3": {
-                "cname": "2",
+                "cname": "",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
-                "week": "",
+                "week_num": "",
+                "week_from": "",
+                "week_to": "",
                 "teacher": "",
                 "classroom": ""
             },
             "4": {
-                "cname": "3",
+                "cname": "",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
-                "week": "",
+                "week_num": "",
+                "week_from": "",
+                "week_to": "",
                 "teacher": "",
                 "classroom": ""
             }
         }
-    }
+    },
+    "homeWk_dir": "homework"
 }

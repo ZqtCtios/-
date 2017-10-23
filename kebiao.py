@@ -3,18 +3,24 @@
 import json
 import sys
 import getopt
+import os
 course = {'cname': '',
           'cfrom': '',
           'cto=0': '',
           'weekkind': '',
-          'week': '',
+          'week_num': '',
+          'week_from': '',
+          'week_to': '',
           'teacher': '',
           'classroom': ''}
 courses = {}
 course_data = {'num': '', 'courses': courses}
 time = {}
 week_data = {'long': '', 'time': time}
-data = {'week_data': week_data, 'course_data': course_data}
+data = {
+    'week_data': week_data,
+    'course_data': course_data,
+    'homeWk_dir': 'homework'}
 
 
 def init(num):
@@ -25,6 +31,7 @@ def init(num):
     for i in range(1, 11):
         time[i] = ''
     path = 'data.json'
+    print('数据初始化成功')
     print('数据文件为data.json')
     f = open(path, 'w+')
     js = json.dumps(data, indent=4, separators=(',', ': '))
@@ -44,21 +51,32 @@ def show_msg():
 
 
 def showhelp():
-    print('help')
+    print('-------用法-------')
+    print()
+    print()
+    print()
+    print()
+    print()
+    print()
 
 
 def init_homework():
     data = load_data()
-    c_list=[]
+    path = data['homeWk_dir']
+    c_list = []
     courses = data['course_data']['courses']
     for i in courses.keys():
         c_list.append(courses[i]['cname'])
-    c_list=list(set(c_list))
+    c_list = list(set(c_list))
+    if not os.path.isdir(path):
+        os.mkdir(path)
     for x in c_list:
-        
-        
-        
-    print('init_homework')
+        x_path = path + '\\' + x
+        os.mkdir(x_path)
+        f = open(x_path + '\\作业.txt', 'w+')
+        f.close()
+
+    print('初始化作业文件夹')
 
 
 def show_all():
@@ -79,7 +97,7 @@ def show_homework():
 
 
 def main(argv):
-    
+
     try:
         opts, args = getopt.getopt(argv, 'hi:s:', ['help', 'init=', 'show='])
     except getopt.GetoptError:
