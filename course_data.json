@@ -1,92 +1,40 @@
 {
-    "1": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "2": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "3": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "4": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "5": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "6": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "7": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "8": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "9": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
-    },
-    "10": {
-        "cfrom": "",
-        "cid": "",
-        "classroom": "",
-        "cname": "",
-        "cto=0": "",
-        "teacher": "",
-        "weekkind": ""
+    "week_data": {},
+    "course_data": {
+        "num": 4,
+        "courses": {
+            "1": {
+                "cname": "",
+                "cfrom": "",
+                "cto=0": "",
+                "weekkind": "",
+                "teacher": "",
+                "classroom": ""
+            },
+            "2": {
+                "cname": "",
+                "cfrom": "",
+                "cto=0": "",
+                "weekkind": "",
+                "teacher": "",
+                "classroom": ""
+            },
+            "3": {
+                "cname": "",
+                "cfrom": "",
+                "cto=0": "",
+                "weekkind": "",
+                "teacher": "",
+                "classroom": ""
+            },
+            "4": {
+                "cname": "",
+                "cfrom": "",
+                "cto=0": "",
+                "weekkind": "",
+                "teacher": "",
+                "classroom": ""
+            }
+        }
     }
 }

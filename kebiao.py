@@ -1,33 +1,30 @@
-
-# 课表属性：节数分别上课时间，星期提示，上课提示，显示计算
-# 控制系统：装载，常规显示提醒，查询，修改，用户化
-# 数据库：
-
-# 课程Class
-
-
 import json
-course = {'cid': '',
-          'cname': '',
+
+course = {'cname': '',
           'cfrom': '',
           'cto=0': '',
           'weekkind': '',
           'teacher': '',
           'classroom': ''}
-course_data={}
+course_data = {'num': '', 'courses': {}}
+week_data = {}
+data = {'week_data': week_data, 'course_data': course_data}
+
 
 def make_json():
-    path='course_data.json'
-    f=open(path,'w+')
-    js=json.dumps(course_data, sort_keys=True, indent=4, separators=(',', ': '))
+    path = 'course_data.json'
+    f = open(path, 'w+')
+    js = json.dumps(data, indent=4, separators=(',', ': '))
     f.write(js)
     f.close()
-    
+
+
 def init(num):
-    for i in range(num):
-        course_data[i+1]=course.copy()
-        
-    
-if __name__ == '__main__':
-    init(10)
+    course_data['num'] = num
+    for i in range(course_data['num']):
+        course_data['courses'][i + 1] = course.copy()
     make_json()
+
+
+if __name__ == '__main__':
+    init(4)
