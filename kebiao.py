@@ -1,9 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
+# autopep8 --in-place --aggressive --aggressive .\kebiao.py
 import json
 import sys
 import getopt
 import os
+from datetime import *
+import time
+from math import *
+
 course = {'cname': '',
           'cfrom': '',
           'cto=0': '',
@@ -20,7 +25,12 @@ week_data = {'long': '', 'time': time}
 data = {
     'week_data': week_data,
     'course_data': course_data,
-    'homeWk_dir': 'homework'}
+    'homeWk_dir': 'homework',
+    'date_from': '',
+    'week': ''}
+week_table = {}
+today_table = {}
+week_ch = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
 
 
 def init(num):
@@ -40,7 +50,7 @@ def init(num):
 
 
 def load_data():
-    f = open('data.json', 'r')
+    f = open('data.json', 'r', encoding='utf-8')
     js = f.read()
     data = json.loads(js)
     return data
@@ -80,7 +90,42 @@ def init_homework():
 
 
 def show_all():
-    print('show_all')
+    print('=======================================================================')
+    print("| 时间 | {0[0]} | {0[1]} | {0[2]} | {0[3]} | {0[4]} | {0[5]} | {0[6]} |".format(
+        week_ch))
+
+
+def work(data):
+    week_num_s = data['week']
+    date_s = datetime.strptime(data['date_from'], '%Y-%m-%d')
+    day_of_week = 6 - date_s.weekday()
+    date_n = datetime.now() - date_s
+    n = date_n.days - day_of_week
+    week_now = n // 7 + int(week_num_s) + 1
+    week_day = datetime.now().weekday()
+    for i in range(1, 11):
+        today_table[i] = ''
+    for i in range(1, 8):
+        week_table[i] = today_table.copy()
+    print(week_table)
+    c = data['course_data']['courses']
+    for x in c.keys():
+        course = c[x]
+        weekkind = course['weekkind']
+        if ((week_now //
+             2 == 1) and (weekkind in ['1', '3'])) or ((week_now //
+                                                        2 == 0) and (weekkind in ['2', '3'])):
+            week_from = course['week_from']
+            week_to = course['week_to']
+            if week_now > week_to or week_now < week_from:
+                continue
+            x = int(course['week_num'])
+            y = int(course['cfrom'])
+            week_table[x][y] = course
+            week_table[x][y + 1] = course
+        else:
+            continue
+    print(week_table)
 
 
 def show_today():
@@ -127,4 +172,6 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    # main(sys.argv[1:])
+    data = load_data()
+    work(data)

@@ -1,57 +1,189 @@
 {
     "week_data": {
-        "long": "",
+        "long": "50",
         "time": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "6": "",
-            "7": "",
-            "8": "",
-            "9": "",
-            "10": ""
+            "1": "8:00",
+            "2": "9:00",
+            "3": "10:00",
+            "4": "11:00",
+            "5": "13:30",
+            "6": "14:30",
+            "7": "15:30",
+            "8": "16:30",
+            "9": "18:30",
+            "10": "19:30"
         }
     },
     "course_data": {
-        "num": 4,
+        "num": 16,
         "courses": {
             "1": {
-                "cname": "",
-                "cfrom": "",
-                "cto=0": "",
-                "weekkind": "",
-                "week_num": "",
-                "week_from": "",
-                "week_to": "",
-                "teacher": "",
-                "classroom": ""
+                "cname": "分布式计算",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "1",
+                "week_from": "12",
+                "week_to": "19",
+                "teacher": " 卢本捷",
+                "classroom": "3-540"
             },
             "2": {
-                "cname": "",
-                "cfrom": "",
-                "cto=0": "",
-                "weekkind": "",
-                "week_num": "",
-                "week_from": "",
-                "week_to": "",
-                "teacher": "",
-                "classroom": ""
+                "cname": "分布式计算",
+                "cfrom": "9",
+                "cto=0": "10",
+                "weekkind": "3",
+                "week_num": "3",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": " 卢本捷",
+                "classroom": "3-540"
             },
             "3": {
-                "cname": "",
-                "cfrom": "",
-                "cto=0": "",
-                "weekkind": "",
-                "week_num": "",
-                "week_from": "",
-                "week_to": "",
-                "teacher": "",
-                "classroom": ""
+                "cname": "XML&Webservice",
+                "cfrom": "1",
+                "cto=0": "2",
+                "weekkind": "3",
+                "week_num": "5",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "吴国仕",
+                "classroom": "3-540"
             },
             "4": {
-                "cname": "",
+                "cname": "形势与政策5",
+                "cfrom": "7",
+                "cto=0": "8",
+                "weekkind": "3",
+                "week_num": "5",
+                "week_from": "9",
+                "week_to": "11",
+                "teacher": "宣传部",
+                "classroom": "2-441"
+            },
+            "5": {
+                "cname": "计算机网络",
+                "cfrom": "5",
+                "cto=0": "6",
+                "weekkind": "3",
+                "week_num": "2",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "雷友珣",
+                "classroom": "3-540"
+            },
+            "6": {
+                "cname": "计算机网络",
+                "cfrom": "5",
+                "cto=0": "6",
+                "weekkind": "3",
+                "week_num": "4",
+                "week_from": "4",
+                "week_to": "11",
+                "teacher": "雷友珣",
+                "classroom": "3-540"
+            },
+            "7": {
+                "cname": "编译原理与技术",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "3",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "杨正球",
+                "classroom": "3-540"
+            },
+            "8": {
+                "cname": "编译原理与技术",
+                "cfrom": "5",
+                "cto=0": "6",
+                "weekkind": "1",
+                "week_num": "5",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "杨正球",
+                "classroom": "3-433"
+            },
+            "9": {
+                "cname": "软件工程导论",
+                "cfrom": "5",
+                "cto=0": "6",
+                "weekkind": "2",
+                "week_num": "5",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "王安生",
+                "classroom": "3-540"
+            },
+            "10": {
+                "cname": "软件工程导论",
+                "cfrom": "1",
+                "cto=0": "2",
+                "weekkind": "3",
+                "week_num": "3",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "王安生",
+                "classroom": "3-540"
+            },
+            "11": {
+                "cname": "通信软件设计",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "4",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "雷友珣",
+                "classroom": "3-540"
+            },
+            "12": {
+                "cname": "实用英语写作",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "5",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "刘巍",
+                "classroom": "3-540"
+            },
+            "13": {
+                "cname": "C#程序设计实践",
+                "cfrom": "5",
+                "cto=0": "6",
+                "weekkind": "3",
+                "week_num": "1",
+                "week_from": "12",
+                "week_to": "19",
+                "teacher": "卢本捷",
+                "classroom": "3-540"
+            },
+            "14": {
+                "cname": "数据挖掘",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "2",
+                "week_from": "4",
+                "week_to": "11",
+                "teacher": "牛琨",
+                "classroom": "3-540"
+            },
+            "15": {
+                "cname": "数据挖掘",
+                "cfrom": "3",
+                "cto=0": "4",
+                "weekkind": "3",
+                "week_num": "1",
+                "week_from": "4",
+                "week_to": "11",
+                "teacher": "牛琨",
+                "classroom": "3-540"
+            },
+            "16": {
+                "cname": "算法分析与设计",
                 "cfrom": "",
                 "cto=0": "",
                 "weekkind": "",
@@ -59,9 +191,11 @@
                 "week_from": "",
                 "week_to": "",
                 "teacher": "",
-                "classroom": ""
+                "classroom": "3-540"
             }
         }
     },
-    "homeWk_dir": "homework"
+    "homeWk_dir": "homework",
+    "date_from": "2017-9-27",
+    "week": "4"
 }
