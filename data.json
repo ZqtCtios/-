@@ -184,13 +184,13 @@
             },
             "16": {
                 "cname": "算法分析与设计",
-                "cfrom": "",
-                "cto=0": "",
-                "weekkind": "",
-                "week_num": "",
-                "week_from": "",
-                "week_to": "",
-                "teacher": "",
+                "cfrom": "9",
+                "cto=0": "10",
+                "weekkind": "3",
+                "week_num": "1",
+                "week_from": "4",
+                "week_to": "19",
+                "teacher": "李朝晖",
                 "classroom": "3-540"
             }
         }

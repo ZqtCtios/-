@@ -28,8 +28,7 @@ data = {
     'homeWk_dir': 'homework',
     'date_from': '',
     'week': ''}
-week_table = {}
-today_table = {}
+
 week_ch = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天']
 
 
@@ -95,7 +94,11 @@ def show_all():
         week_ch))
 
 
-def work(data):
+def work():
+    data = load_data()
+    week_table = {}
+    today_table = {}
+
     week_num_s = data['week']
     date_s = datetime.strptime(data['date_from'], '%Y-%m-%d')
     day_of_week = 6 - date_s.weekday()
@@ -103,33 +106,35 @@ def work(data):
     n = date_n.days - day_of_week
     week_now = n // 7 + int(week_num_s) + 1
     week_day = datetime.now().weekday()
+
     for i in range(1, 11):
         today_table[i] = ''
     for i in range(1, 8):
         week_table[i] = today_table.copy()
-    print(week_table)
     c = data['course_data']['courses']
+
     for x in c.keys():
         course = c[x]
         weekkind = course['weekkind']
-        if ((week_now //
-             2 == 1) and (weekkind in ['1', '3'])) or ((week_now //
-                                                        2 == 0) and (weekkind in ['2', '3'])):
-            week_from = course['week_from']
-            week_to = course['week_to']
+        if ((week_now % 2 == 1) and (weekkind in ['1', '3'])) or (
+                (week_now % 2 == 0) and (weekkind in ['2', '3'])):
+            week_from = int(course['week_from'])
+            week_to = int(course['week_to'])
             if week_now > week_to or week_now < week_from:
                 continue
             x = int(course['week_num'])
             y = int(course['cfrom'])
-            week_table[x][y] = course
-            week_table[x][y + 1] = course
+            week_table[x][y] = course.copy()
+            week_table[x][y + 1] = course.copy()
         else:
             continue
-    print(week_table)
+    return week_table
 
 
 def show_today():
-    print('show_today')
+    week_table = work()
+    td = datetime.now().weekday() + 1
+    print(week_table[td])
 
 
 def error():
@@ -172,6 +177,4 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    # main(sys.argv[1:])
-    data = load_data()
-    work(data)
+    main(sys.argv[1:])
