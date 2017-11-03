@@ -20,7 +20,7 @@
             "1": {
                 "cname": "分布式计算",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "1",
                 "week_from": "12",
@@ -31,7 +31,7 @@
             "2": {
                 "cname": "分布式计算",
                 "cfrom": "9",
-                "cto=0": "10",
+                "cto": "10",
                 "weekkind": "3",
                 "week_num": "3",
                 "week_from": "4",
@@ -42,7 +42,7 @@
             "3": {
                 "cname": "XML&Webservice",
                 "cfrom": "1",
-                "cto=0": "2",
+                "cto": "2",
                 "weekkind": "3",
                 "week_num": "5",
                 "week_from": "4",
@@ -53,7 +53,7 @@
             "4": {
                 "cname": "形势与政策5",
                 "cfrom": "7",
-                "cto=0": "8",
+                "cto": "8",
                 "weekkind": "3",
                 "week_num": "5",
                 "week_from": "9",
@@ -64,7 +64,7 @@
             "5": {
                 "cname": "计算机网络",
                 "cfrom": "5",
-                "cto=0": "6",
+                "cto": "6",
                 "weekkind": "3",
                 "week_num": "2",
                 "week_from": "4",
@@ -75,7 +75,7 @@
             "6": {
                 "cname": "计算机网络",
                 "cfrom": "5",
-                "cto=0": "6",
+                "cto": "6",
                 "weekkind": "3",
                 "week_num": "4",
                 "week_from": "4",
@@ -86,7 +86,7 @@
             "7": {
                 "cname": "编译原理与技术",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "3",
                 "week_from": "4",
@@ -97,7 +97,7 @@
             "8": {
                 "cname": "编译原理与技术",
                 "cfrom": "5",
-                "cto=0": "6",
+                "cto": "6",
                 "weekkind": "1",
                 "week_num": "5",
                 "week_from": "4",
@@ -108,7 +108,7 @@
             "9": {
                 "cname": "软件工程导论",
                 "cfrom": "5",
-                "cto=0": "6",
+                "cto": "6",
                 "weekkind": "2",
                 "week_num": "5",
                 "week_from": "4",
@@ -119,7 +119,7 @@
             "10": {
                 "cname": "软件工程导论",
                 "cfrom": "1",
-                "cto=0": "2",
+                "cto": "2",
                 "weekkind": "3",
                 "week_num": "3",
                 "week_from": "4",
@@ -130,7 +130,7 @@
             "11": {
                 "cname": "通信软件设计",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "4",
                 "week_from": "4",
@@ -141,7 +141,7 @@
             "12": {
                 "cname": "实用英语写作",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "5",
                 "week_from": "4",
@@ -152,7 +152,7 @@
             "13": {
                 "cname": "C#程序设计实践",
                 "cfrom": "5",
-                "cto=0": "6",
+                "cto": "6",
                 "weekkind": "3",
                 "week_num": "1",
                 "week_from": "12",
@@ -163,7 +163,7 @@
             "14": {
                 "cname": "数据挖掘",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "2",
                 "week_from": "4",
@@ -174,7 +174,7 @@
             "15": {
                 "cname": "数据挖掘",
                 "cfrom": "3",
-                "cto=0": "4",
+                "cto": "4",
                 "weekkind": "3",
                 "week_num": "1",
                 "week_from": "4",
@@ -185,7 +185,7 @@
             "16": {
                 "cname": "算法分析与设计",
                 "cfrom": "9",
-                "cto=0": "10",
+                "cto": "10",
                 "weekkind": "3",
                 "week_num": "1",
                 "week_from": "4",

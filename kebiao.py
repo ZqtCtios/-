@@ -11,7 +11,7 @@ from math import *
 
 course = {'cname': '',
           'cfrom': '',
-          'cto=0': '',
+          'cto': '',
           'weekkind': '',
           'week_num': '',
           'week_from': '',
@@ -89,9 +89,31 @@ def init_homework():
 
 
 def show_all():
-    print('=======================================================================')
-    print("| 时间 | {0[0]} | {0[1]} | {0[2]} | {0[3]} | {0[4]} | {0[5]} | {0[6]} |".format(
-        week_ch))
+    for i in range(len(week_ch)):
+        week_ch[i] = alignment(week_ch[i], 21, align='center')
+    print(''.rjust(177, '-'))
+    print("|{0}|{1[0]}|{1[1]}|{1[2]}|{1[3]}|{1[4]}|{1[5]}|{1[6]}|".format(
+        alignment('星期', 21, align='center'), week_ch))
+    print(''.rjust(177, '-'))
+    week_table = work()
+    for i in range(1, 11, 2):
+        print('|', end='')
+        class_time = '%s节课--%s节课' % (i, i + 1)
+        print(alignment(class_time, 20, align='center'), '|', end='')
+        for j in range(1, 8):
+            today = week_table[j]
+            if type(today[i]) == type({}):
+                print(
+                    alignment(
+                        today[i]['cname'],
+                        20,
+                        align='center'),
+                    '|',
+                    end='')
+            else:
+                print(alignment('', 20, align='center'), '|', end='')
+        print(end='\n')
+        print(''.rjust(177, '-'))
 
 
 def work():
@@ -131,10 +153,65 @@ def work():
     return week_table
 
 
+def alignment(str1, space, align='left'):
+    length = len(str1.encode('gb2312'))
+    space = space - length if space >= length else 0
+    if align == 'left':
+        str1 = str1 + ' ' * space
+    elif align == 'right':
+        str1 = ' ' * space + str1
+    elif align == 'center':
+        str1 = ' ' * (space // 2) + str1 + ' ' * (space - space // 2)
+    return str1
+
+
 def show_today():
+    print('今天要上的课~')
     week_table = work()
     td = datetime.now().weekday() + 1
-    print(week_table[td])
+    today = week_table[td]
+    print(''.rjust(55, '-'))
+    print(
+        '|',
+        alignment(
+            '时间',
+            15,
+            align='center'),
+        '|',
+        alignment(
+            '课程名称',
+            20,
+            align='center'),
+        '|',
+        alignment(
+            '教室',
+            10,
+            align='center'),
+        '|')
+    print(''.rjust(55, '-'))
+    for i in range(1, 10, 2):
+        if isinstance(today[i], type({})):
+            cfrom = today[i]['cfrom']
+            cto = today[i]['cto']
+            class_time = '%s节课--%s节课' % (cfrom, cto)
+            print(
+                '|',
+                alignment(
+                    class_time,
+                    15,
+                    align='center'),
+                '|',
+                alignment(
+                    today[i]['cname'],
+                    20,
+                    align='center'),
+                '|',
+                alignment(
+                    today[i]['classroom'],
+                    10,
+                    align='center'),
+                '|')
+            print(''.rjust(55, '-'))
 
 
 def error():
@@ -154,6 +231,8 @@ def main(argv):
         error()
     if len(opts) > 1:
         error()
+    if len(opts) == 0:
+        exit()
     opt = opts[0][0]
     arg = opts[0][1]
     if opt in ('-h', '--help'):
